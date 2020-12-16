@@ -7,6 +7,7 @@ import java.sql.*;
 
 public class carsConnection {
 
+    //connect to the cars database
     public static Connection getConnection() {
         Connection conn = null;
         try {
