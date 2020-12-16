@@ -15,6 +15,7 @@ public class CarDB {
         
     }
     
+    //insert new cars data to database
     public void insertData(int id, String name, double price, int quantity) {
         String query = " insert into carModels (ModelNo, ModelName, ModelPrice, ModelQuantity)"
                          + " values (?, ?, ?, ?)";
@@ -35,6 +36,7 @@ public class CarDB {
     }
 
 	
+    //get car data by id	
     public void selectById(int id) {
         String query = "SELECT * FROM carModels WHERE id = ?";
 
@@ -57,6 +59,7 @@ public class CarDB {
     }
 
 	
+    //get all cars data	
     public void selectAll() {
         String query = "SELECT * FROM carModels";
 
@@ -81,8 +84,9 @@ public class CarDB {
 		e.printStackTrace();
 	} 
     }
+	
 
-
+    //delete a car by id
     public void deleteData(int id) {
         String query = "delete from carModels where ModelNo = ?";
 
@@ -98,6 +102,8 @@ public class CarDB {
 	} 
     }
 
+	
+    //update car data by id	
     public void updateData(int id, double price, int quantity) {
         String query = "update carModels set ModelPrice = ? , ModelQuantity = ? where ModelNo = ?";
 
